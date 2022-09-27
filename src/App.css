@@ -1,0 +1,138 @@
+@tailwind components;
+@tailwind base;
+
+@layer base {
+  body {
+    @apply bg-gray-800 text-white font-sans;
+  }
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@layer components {
+  .btn-main {
+    @apply border border-borderColor px-4 py-3 rounded-full uppercase text-xl font-semibold cursor-pointer text-white transition-all ease-in-out duration-500;
+  }
+  .btn-none-active {
+    @apply border border-borderColor px-4 py-3 rounded-full uppercase text-xl font-semibold cursor-pointer text-white transition-all ease-in-out duration-500;
+  }
+  .btn-booking {
+    @apply px-10 py-2 rounded-lg uppercase text-2xl font-semibold cursor-pointer hover:bg-sky-600 hover:text-white transition-all ease-in-out duration-500;
+  }
+  .btn-info {
+    @apply md:px-5 px-3 md:py-2 py-1 rounded-full font-medium border border-borderColor md:text-white hover:brightness-75 hover:text-gray-50 transition duration-300;
+  }
+  .card {
+    @apply bg-primary rounded-md shadow-md shadow-primary relative overflow-hidden cursor-pointer hover:shadow-lg hover:shadow-primary;
+  }
+
+  .badge {
+    @apply flex justify-between items-center bg-cyan-50 rounded-md absolute top-2 left-2 p-2 min-w-[25%];
+  }
+  .seat {
+    @apply w-8 h-8 rounded-md cursor-pointer m-2 bg-gray-400 text-center text-white;
+  }
+  .booked-seat {
+    @apply !bg-red-500 cursor-no-drop;
+  }
+  .vip-seat {
+    @apply !bg-orange-500;
+  }
+  .booking-seat {
+    @apply !bg-green-500;
+  }
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.btn-main:hover {
+  box-shadow: 0px 10px 15px 0px rgb(59 55 188 / 50%);
+}
+.hover-shadow:hover {
+  box-shadow: 0px 10px 15px 0px rgb(59 55 188 / 50%);
+}
+.btn-main {
+  background: linear-gradient(90deg, #5560ff 0%, #ff4343 100%);
+}
+.btn-active {
+  background: linear-gradient(90deg, #5560ff 0%, #ff4343 100%);
+}
+.btn-none-active:hover {
+  background: linear-gradient(90deg, #5560ff 0%, #ff4343 100%);
+  box-shadow: 0px 10px 15px 0px rgb(59 55 188 / 50%);
+}
+
+.scrollToTop {
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  padding: 0;
+  color: #ffffff;
+  z-index: 999;
+  bottom: 30px;
+  right: 30px;
+  position: fixed;
+  border-radius: 5px;
+  -webkit-transform: translateY(150px);
+  transform: translateY(150px);
+  background: rgb(45 212 191);
+  text-align: center;
+}
+.scrollActive {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  animation: bounceInDown 2s;
+  -webkit-animation: bounceInDown 2s;
+  -moz-animation: bounceInDown 2s;
+}
+
+@keyframes bounceInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-2000px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  80% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
