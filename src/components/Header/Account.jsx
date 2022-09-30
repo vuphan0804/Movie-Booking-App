@@ -32,6 +32,9 @@ const Account = () => {
     return (
       <div className="flex items-center text-base">
         <div className="flex items-center">
+          <Link to="/admin" className="mr-4">
+            Admin
+          </Link>
           <img
             className="w-8 h-8 rounded-full mr-2"
             src="https://picsum.photos/200/300"
