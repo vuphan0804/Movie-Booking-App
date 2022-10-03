@@ -35,6 +35,7 @@ function Copyright(props) {
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
+      {"User: doremon"} {"Password: doremon"}
     </Typography>
   );
 }

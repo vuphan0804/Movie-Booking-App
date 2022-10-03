@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 const Account = () => {
   const [user, setUser] = useState({});
   useEffect(() => {
-    // setInterval(() => {
-    // }, []);
-    const userString = localStorage.getItem("user");
-    const user = JSON.parse(userString);
-    setUser(user);
+    setInterval(() => {
+      const userString = localStorage.getItem("user");
+      const user = JSON.parse(userString);
+      setUser(user);
+    }, []);
   }, 5000);
 
   const logout = () => {
